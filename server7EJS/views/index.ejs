@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countletters</title>
+</head>
+<body>
+    <%if(locals.numberOfLtr){%>
+   <h1>There are total <%= numberOfLtr %> in your name</h1>
+   <%}else{%>
+  <h1>Enter your name to count number of charcter</h1>
+    <%}%>
+    <form action="/submit" method='POST'>
+        <input type="text" name="fName" placeholder="First Name">
+        <input type="text" name="lName" placeholder="Last Name">
+        <input type="submit" value="OKK">
+    </form>
+    
+</body>
+</html>

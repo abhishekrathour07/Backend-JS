@@ -2,18 +2,6 @@ import express from "express";
 const app = express();
 const port = 3000;
 
-
-app.use((req, res, next) => {
-    console.log("Middleware 1");
-    next();
-});
-
-// Middleware 2
-app.use((req, res, next) => {
-    console.log("Middleware 2");
-    next(); // Ensuring that the next middleware or route handler is called
-});
-
 app.get('/', (req, res) => {
     res.send("Working properly")
 })
